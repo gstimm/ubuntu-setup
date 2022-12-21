@@ -113,3 +113,10 @@ sudo apt install docker-ce -y
 
 sudo usermod -aG docker ${USER}
 su - ${USER}
+
+# SSH
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "contato.gabrieltimm@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
